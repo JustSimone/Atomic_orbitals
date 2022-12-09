@@ -1,7 +1,6 @@
 import numpy as np
 import Legendre_Polynomials as lp
 import matplotlib.pyplot as plt
-from scipy.special import sph_harm
 from matplotlib import cm, colors
 from mpl_toolkits.mplot3d import Axes3D
 
@@ -18,7 +17,7 @@ def features(Y):
         return [radii, colors]
 
 
-def orbit ():
+def orbit (l, ml):
 
     # Image REsolution
     N = 100
@@ -29,7 +28,8 @@ def orbit ():
     theta, phi = np.meshgrid(theta, phi)
 
     # Definition of the firsts Legendre Polynomials
-    Y = lp.Legendre_Polynomials(2, theta, phi)
+    #Y = lp.Legendre_Polynomials(l, ml, theta, phi)
+    Y = lp.Legendre_Polynomials(30, theta, phi)
 
     # Finding radii and colors for the plot
     radii, colors = features(Y)
@@ -51,4 +51,4 @@ def orbit ():
     ax.set_zlim(-1,1)
     plt.show()
 
-orbit()
+orbit(3,1)
