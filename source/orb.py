@@ -17,6 +17,8 @@ def orbit (l, ml):
     Y = sh.Spherical_harmonics(l, ml, theta, phi)
     #Y = sh.Spherical_harmonics(30, theta, phi)
 
-    Y.plot()
+    #Plot(0) does not print any Image
+    #Plot(1) does print images
+    Y.plot(0)
 
 orbit(2,1)

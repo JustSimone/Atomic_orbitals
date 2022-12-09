@@ -32,7 +32,7 @@ class Spherical_harmonics:
 
     def norm(self):
         return (self.Y.real * self.Y.real + self.Y.imag * self.Y.imag)*5
-    def plot(self):
+    def plot(self, print):
         # Finding radii and colors for the plot
         radii, colors = features(self.Y)
 
@@ -52,6 +52,6 @@ class Spherical_harmonics:
         ax.set_ylim(-1,1)
         ax.set_zlim(-1,1)
         plt.show()
-        
-        pic_name = "../img/Y"+str(self.l)+"_"+str(self.ml)+".pdf"
-        fig.savefig(pic_name)
+        if print == 1:
+            pic_name = "../img/Y"+str(self.l)+"_"+str(self.ml)+".pdf"
+            fig.savefig(pic_name)
