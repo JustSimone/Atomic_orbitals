@@ -14,7 +14,11 @@ def orbit (l, ml):
     theta, phi = np.meshgrid(theta, phi)
 
     # Definition of the firsts Legendre Polynomials
+    #
+    #Using the scipy library for spherical harmonics
     Y = sh.Spherical_harmonics(l, ml, theta, phi)
+
+    #Using spherical harmonics caluculated manually
     #Y = sh.Spherical_harmonics(30, theta, phi)
 
     #Plot(0) does not print any Image
