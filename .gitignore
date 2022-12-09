@@ -1,2 +1,4 @@
-# cache file
+#Remove frome repo cache file
 __pycache__
+
+#Remove from repo .DS_Store files
