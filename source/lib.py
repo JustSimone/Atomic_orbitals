@@ -16,5 +16,5 @@ def features(Y):
         return [radii, colors]
     else:
         radii = np.abs(norm(Y))
-        colors = 0.5 *(norm(Y) + 1)
+        colors = 0.5 * (norm(Y) +1)
         return [radii, colors]

@@ -2,3 +2,4 @@
 __pycache__
 
 #Remove from repo .DS_Store files
+.DS_Store

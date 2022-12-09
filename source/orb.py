@@ -25,4 +25,4 @@ def orbit (l, ml):
     #Plot(1) does print images
     Y.plot(0)
 
-orbit(2,1)
+orbit(2, 0)
