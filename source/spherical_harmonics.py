@@ -7,7 +7,11 @@ from mpl_toolkits.mplot3d import Axes3D
 from lib import features
 
 class Spherical_harmonics:
-
+    '''
+    def __init__(self, n, theta, phi):
+        self.n = n
+        self.Y = harm(n, theta, phi)
+    '''
     def __init__(self, l, ml, theta, phi):
         if ml*ml <= l*l:
             self.ml = int(ml)
@@ -18,11 +22,7 @@ class Spherical_harmonics:
             self.Y = sph_harm(self.ml, self.l, phi, theta)
         else:
             raise Exeption("|ml|<l")
-    '''
-    def __init__(self, n, theta, phi):
-        self.n = n
-        self.Y = harm(n, theta, phi)
-    '''
+
     def get_max(self):
         return self.Y.max()
     def get_min(self):
@@ -52,3 +52,6 @@ class Spherical_harmonics:
         ax.set_ylim(-1,1)
         ax.set_zlim(-1,1)
         plt.show()
+        
+        pic_name = "../img/Y"+str(self.l)+"_"+str(self.ml)+".pdf"
+        fig.savefig(pic_name)

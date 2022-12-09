@@ -19,4 +19,4 @@ def orbit (l, ml):
 
     Y.plot()
 
-orbit(3, 1)
+orbit(2,1)
