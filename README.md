@@ -7,7 +7,7 @@ $$Y_{l, m_l} (\theta, \phi) = (-1)^{m_l} \[ \frac{2l+1}{4\pi}\frac{(l-m_l)!}{(l+
 where $P^{m_l}_l(\cos\theta)$ is the Legendre Polynomial with of l degree and $m_l$ order.
 
 ## Library
-To use this class it is necessary install:
+To use this class it is necessary to install:
 - numpy
 - matplotlib
 - scipy
