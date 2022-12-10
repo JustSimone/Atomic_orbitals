@@ -1,12 +1,11 @@
 import numpy as np
-from scipy.special import sph_harm
-from harmonics import harm
+from scipy.special import sph_harm, genlaguerre
 import matplotlib.pyplot as plt
 from matplotlib import cm, colors
 from mpl_toolkits.mplot3d import Axes3D
-from lib import features
+from lib import features, harm
 
-class Spherical_harmonics:
+class Angular:
     '''
     def __init__(self, n, theta, phi):
         self.n = n
@@ -29,6 +28,8 @@ class Spherical_harmonics:
         return self.Y.min()
     def shape(self):
         return self.Y.shape
+    def values(self):
+        return self.Y.real
 
     def norm(self):
         return (self.Y.real * self.Y.real + self.Y.imag * self.Y.imag)*5
@@ -55,3 +56,32 @@ class Spherical_harmonics:
         if print == 1:
             pic_name = "../img/Y"+str(self.l)+"_"+str(self.ml)+".pdf"
             fig.savefig(pic_name)
+
+'''
+It is important to notice that the form of the radial function depends on the shape of the potential energy function
+therefore this solution may be different from the one of a different system.
+The system I decided to study is the hydrogenlike atom, with a coulombian attractive potential.
+
+U(r) = - Zq**2 / r
+
+'''
+class Radial:
+    def __init__(self, n, l, r):
+        # General constant definition (values to be fixed)
+        Z = 1
+        q = 1
+        rB = 1
+        Uef = (2*Z)/(rB*n)
+        a = np.sqrt(Uef * (np.math.factorial(n-l-1)/(2*n*np.math.factorial(n+l))))
+        b = np.power(Uef*r,l)
+
+        # Class elements definition
+        self.n = n
+        self.l = l
+        self.r = r
+        self.U = -Z*(q*q)/r
+        self.L = genlaguerre((2 * self.l + 1), (self.n - self.l - 1))(Uef*r)
+        self.X = a * b * self.L * np.exp(-(Uef*r)/2)
+
+    def values(self):
+        return self.X
