@@ -8,7 +8,7 @@ where $P^{m_l}_l(\cos\theta)$ is the Legendre Polynomial with of l degree and $m
 
 ## hydrogenlike atomic orbitals
 The shape of this orbital are not constant, in fact they depends on the radius from the center of the atom. In general the function used to compute the orbitals, depends on the form of the potential chosen, and it is solution of the Schrödinger equation in the spherical coordinates system.
-$$\frac{\partial^2\psi}{partial r^2} +\frac{2}{r} \frac{\partial \psi}{\partial r} + \frac{1}{r^2 \sin^2{\theta}\left[ \sin{\theta} \frac{\partial}{\partial \theta} \left(\sin{\theta} \frac{\partial \psi}{\partial \thta} \right) +\frac{\partial^2 \psi}{\partial \phi^2}\right] + \frac{2m}{\hbar} (w - U)\psi$$
+$$\frac{\partial^2 \phi}{\partial r^2} + \frac{2}{r} \frac{\partial\phi}{\partial r} + \frac{1}{r^2 \sin^2{\theta}}\left[ \sin{\theta} \frac{\partial}{\partial r} \left ( \sin{\theta}\frac{\partial \phi}{\partial \theta} \right) + \frac{\partial^2 \phi}{\partial \varphi^2} \right] + \frac{2m}{\hbar^2}(2w +U)\phi = 0$$
 
 ## Library
 To use this class it is necessary to install:
