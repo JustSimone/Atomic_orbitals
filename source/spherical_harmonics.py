@@ -22,9 +22,9 @@ class Angular:
         else:
             raise Exeption("|ml|<l")
 
-    def get_max(self):
+    def max(self):
         return self.Y.max()
-    def get_min(self):
+    def min(self):
         return self.Y.min()
     def shape(self):
         return self.Y.shape
