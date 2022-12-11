@@ -7,7 +7,7 @@ def flat(Y):
     return bool
 
 def norm(Y):
-    return (Y.values().real * Y.values().real + Y.values().imag * Y.values().imag)*5
+    return (Y.real * Y.real + Y.imag * Y.imag)*5
 
 def features(Y):
     if flat(Y):

@@ -4,10 +4,12 @@ import wave_function as wf
 
 pi = np.pi
 
-def orbit (n, l, ml):
+# From the definition of l we get that l = n-1
+def orbit (n, ml):
 
     # Image REsolution
     N = 100
+    l = n-1
 
     # Creation of the main variables
     theta = np.linspace(0, pi, N)
@@ -15,7 +17,8 @@ def orbit (n, l, ml):
     r = np.linspace(0.1, 1, N)
     theta, phi = np.meshgrid(theta, phi)
 
-    psi = wf.Wave_function(n,l,ml, r, theta, phi)
+    psi = wf.Wave_function(n, l, ml, r, theta, phi)
+    Y = sh.Angular(l, ml, theta, phi)
 
     '''
     # Definition of the firsts Legendre Polynomials
@@ -29,5 +32,5 @@ def orbit (n, l, ml):
 
     #Plot(0) does not print any Image
     #Plot(1) does print images
-    psi.plot(0)
-orbit(3, 2, 0)
+    Y.plot(0)
+orbit(3, 1)
