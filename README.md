@@ -12,7 +12,11 @@ $$\frac{\partial^2 \phi}{\partial r^2} + \frac{2}{r} \frac{\partial\phi}{\partia
 Given the fact that it is a differential equation of partial derivatives and the agolar part is independent from the radial one it is possible to rewrite the solution as the multiplication of two separate functions
 $$\phi (r, \varphi, \theta) = \chi(r)\Upsilon (varphi, \theta)$$
 where $\Upsilon$ is a spherical harmonic and its equation is given in the previous paragraph, while $\chi$ is:
+<<<<<<< HEAD
 $$\chi_{n,l}(r) = \left [ \frac{2Z}{r_Bn} \frac{(n-l-1)!}{2n(n+l)!} \right ]^{1/2}\left ( \frac{2Zr}{r_Bn} \right )^{l+1} e^{-\frac{Zr}{r_Bn}}L \left ( \frac{2Zr}{r_Bn} \right )$$
+=======
+$$\chi_{n,l}(r) = \left [ \frac{2Z}{r_Bn} \frac{(n-l-1)!}{2n(n+l)!} \right ]^{1/2}\left ( \frac{2Zr}{r_Bn} \right )^{l+1} e^{-\frac{-Zr}{r_Bn}} L\left ( \frac{2Zr}{r_Bn} \right )$$
+>>>>>>> 0650511127d35cac9a86cf23c6fbd10b78f1cad7
 con $L^{2l+1}_{n-l-1} \left ( \frac{2Zr}{r_Bn} \right)$ polinomio di Laguerre.
 ## Library
 To use this class it is necessary to install:
