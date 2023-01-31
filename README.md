@@ -14,6 +14,9 @@ $$\phi (r, \varphi, \theta) = \chi(r)\Upsilon (varphi, \theta)$$
 where $\Upsilon$ is a spherical harmonic and its equation is given in the previous paragraph, while $\chi$ is:
 $$\chi_{n,l}(r) = \left [ \frac{2Z}{r_Bn} \frac{(n-l-1)!}{2n(n+l)!} \right ]^{1/2}\left ( \frac{2Zr}{r_Bn} \right )^{l+1} e^{-\frac{-Zr}{r_Bn}} L\left ( \frac{2Zr}{r_Bn} \right )$$
 where $L^{2l+1}_{n-l-1} \left ( \frac{2Zr}{r_Bn} \right)$ is Laguerre Polynomial.
+## Strcture of the code
+The main file is orb.py, in which we fine the function orb() that takes as imput the $n$ and $m_l$ and gives as output both the atomic orbital and the spherical harmonic. In the case of the first, there is a slider which allows to move between different radiuses of the orbital.
+To save a picture of the harmonic it is neccessary to change the value of the function print() from 0 to 1, as said in the code's comments.
 ## Library
 To use this class it is necessary to install:
 - numpy
