@@ -20,7 +20,7 @@ class Wave_function:
 
     def plot(self, img):
         # Finding radii and colors for the plot
-        radii, colors = features(self.Y)
+        radii, colors = features(self.Y.values())
         i = 0
 
         X = self.X.values()
@@ -38,12 +38,11 @@ class Wave_function:
         ax.set_xlabel('X')
         ax.set_ylabel('Y')
         ax.set_zlabel('Z')
-        '''
         ax.set_xlim(-0.001,0.001)
         ax.set_ylim(-0.001,0.001)
         ax.set_zlim(-0.001,0.001)
-        '''
-        
+
+
         axi = fig.add_axes([0.25, 0.1, 0.65, 0.03])
         i_slider = Slider(
             ax=axi,

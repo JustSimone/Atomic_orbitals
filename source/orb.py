@@ -33,4 +33,5 @@ def orbit (n, ml):
     #Plot(0) does not print any Image
     #Plot(1) does print images
     Y.plot(0)
-orbit(3, 1)
+    psi.plot(0)
+orbit(3, 0)
