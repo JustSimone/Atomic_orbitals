@@ -37,7 +37,6 @@ def orbit (n, ml):
     #Plot(0) does not print any Image
     #Plot(1) does print images
     #A bit slow
-    print(p)
     if p == 0:
         Y.plot(s)
     if p == 1:
