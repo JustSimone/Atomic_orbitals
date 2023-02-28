@@ -17,6 +17,12 @@ where $L^{2l+1}_{n-l-1} \left ( \frac{2Zr}{r_Bn} \right)$ is Laguerre Polynomial
 ## Strcture of the code
 The main file is orb.py, in which we fine the function orb() that takes as imput the $n$ and $m_l$ and gives as output both the atomic orbital and the spherical harmonic. In the case of the first, there is a slider which allows to move between different radiuses of the orbital.
 To save a picture of the harmonic it is neccessary to change the value of the function print() from 0 to 1, as said in the code's comments.
+To make the code more user friendly, for those who just want to get the image of the atomic orbitals you may use terminal arguments:
+- the first is the n quantic number (l = n-1);
+- the second is the ml quantic number;
+- the third can be eather a 0, to print only the spherical harmonics, a 1, to print only the probability function, or a 2, to print both (the default value will be 0);
+- the forth can be both a 0, to not save the frame, or a one to save the frame
+
 ## Library
 To use this class it is necessary to install:
 - numpy
