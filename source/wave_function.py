@@ -38,23 +38,23 @@ class Wave_function:
         ax.set_xlabel('X')
         ax.set_ylabel('Y')
         ax.set_zlabel('Z')
-        ax.set_xlim(-0.001,0.001)
-        ax.set_ylim(-0.001,0.001)
-        ax.set_zlim(-0.001,0.001)
+        ax.set_xlim(-0.01,0.01)
+        ax.set_ylim(-0.01,0.01)
+        ax.set_zlim(-0.01,0.01)
 
 
         axi = fig.add_axes([0.25, 0.1, 0.65, 0.03])
         i_slider = Slider(
             ax=axi,
             label="Amplitude",
-            valmin=0,
-            valmax=100,
+            valmin=1,
+            valmax=50,
             valinit=i,
             valstep = 1
         )
 
         def update(val):
-            i_ = int(i_slider.val)
+            i_ = int(i_slider.val) - 1
             x =  X[i_] * radii * np.sin(self.theta) * np.cos(self.phi)
             y =  X[i_] * radii * np.sin(self.theta) * np.sin(self.phi)
             z =  X[i_] * radii * np.cos(self.theta)

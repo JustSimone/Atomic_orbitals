@@ -1,14 +1,18 @@
 import numpy as np
 import spherical_harmonics as sh
 import wave_function as wf
+import sys
 
 pi = np.pi
+
+p = int(sys.argv[3])
+s = int(sys.argv[4])
 
 # From the definition of l we get that l = n-1
 def orbit (n, ml):
 
     # Image REsolution
-    N = 100
+    N = 50
     l = n-1
 
     # Creation of the main variables
@@ -32,6 +36,18 @@ def orbit (n, ml):
 
     #Plot(0) does not print any Image
     #Plot(1) does print images
-    Y.plot(0)
-    psi.plot(0)
-orbit(3, 0)
+    #A bit slow
+    print(p)
+    if p == 0:
+        Y.plot(s)
+    if p == 1:
+        psi.plot(s)
+    if p == 2:
+        psi.plot(s)
+        Y.plot(s)
+
+
+n = int(sys.argv[1])
+ml = int(sys.argv[2])
+   
+orbit(n, ml)
