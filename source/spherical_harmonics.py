@@ -81,7 +81,7 @@ class Radial:
         self.r = r
         self.U = -Z*(q*q)/r
         self.L = genlaguerre((2 * self.l + 1), (self.n - self.l - 1))(Uef*r)
-        self.X = a * b * self.L * np.exp(-(Uef*r)/2)
+        self.X = a * (1/(r*r)) * b * self.L * np.exp(-(Uef*r)/2)
 
     def values(self):
         return self.X
