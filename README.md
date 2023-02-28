@@ -1,6 +1,23 @@
 # Atomic Orbital
 This library contains the basic tools to plot the atomic orbitals using spherical harmonics as well as the vibrating function psi of the orbitals of a hydrogenlike atom, given the three integer positive numbers n, l and ml, respectively main quantic number, orbital quantic number and magnetic quantic number.
 
+## How to use the library
+After downloading the source you'll need to go in the source folder and run the commaind 
+```
+python3 orb.py n ml p s
+```
+where n, ml, p and s are the four aruments defined as follow
+- n is the n quantic number (l = n-1);
+- ml is the ml quantic number;
+- p can be eather a 0, to print only the spherical harmonics, a 1, to print only the probability function, or a 2, to print both (the default value will be 0);
+- s can be both a 0, to not save the frame, or a one to save the frame;
+
+sostitute the letters with the numbers and send the command. For example:
+```
+python3 orb.py 3 0 0 1
+```
+
+
 ## Spherical harmonics
 The shape of the Spherical harmonics is given by the absolute value of the following complex function:
 $$Y_{l, m_l} (\theta, \phi) = (-1)^{m_l} \[ \frac{2l+1}{4\pi}\frac{(l-m_l)!}{(l+m_l)!}\]^{\frac{1}{2}}P^{m_l}_l(\cos\theta)e^{im_l\phi}$$
@@ -17,11 +34,7 @@ where $L^{2l+1}_{n-l-1} \left ( \frac{2Zr}{r_Bn} \right)$ is Laguerre Polynomial
 ## Strcture of the code
 The main file is orb.py, in which we fine the function orb() that takes as imput the $n$ and $m_l$ and gives as output both the atomic orbital and the spherical harmonic. In the case of the first, there is a slider which allows to move between different radiuses of the orbital.
 To save a picture of the harmonic it is neccessary to change the value of the function print() from 0 to 1, as said in the code's comments.
-To make the code more user friendly, for those who just want to get the image of the atomic orbitals you may use terminal arguments:
-- the first is the n quantic number (l = n-1);
-- the second is the ml quantic number;
-- the third can be eather a 0, to print only the spherical harmonics, a 1, to print only the probability function, or a 2, to print both (the default value will be 0);
-- the forth can be both a 0, to not save the frame, or a one to save the frame
+To make the code more user friendly, for those who just want to get the image of the atomic orbitals you may use terminal arguments shown in the first section.
 
 ## Library
 To use this class it is necessary to install:
